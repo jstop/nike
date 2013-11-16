@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: db/development.postgresql
+  database: scores 
   pool: 5
   timeout: 5000
 
@@ -20,6 +20,6 @@ test:
 
 production:
   adapter: postgresql
-  database: db/production.postgresql
+  database: scores
   pool: 5
   timeout: 5000
