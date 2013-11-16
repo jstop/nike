@@ -10,7 +10,7 @@ class HighScoresController < ApplicationController
   # GET /high_scores/list
   # GET /high_scores.json
   def list
-    @high_scores = HighScore.find(:all, :order => "score, DESC" )
+    @high_scores = HighScore.find(:all, :order => "score DESC" )
   end
 
   # GET /high_scores/1
