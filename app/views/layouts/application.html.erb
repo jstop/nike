@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nike</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <div id="wrapper">
+
+      <div id="header">
+        <div id="logo"><img src="http://nikefootballsociety.com/scoreboard/wp-content/themes/scoreboard/images/logo.png"  /></div>
+        <div id="title"><h2>LEADERBOARD</h2></div>
+      </div>
+      <div class="clearboth"></div>
+
+       <%= yield %>
+
+      <div id="footer">
+      </div>
+
+  </div></body>
+</html>
