@@ -1,3 +1,5 @@
+<%= link_to 'New High score', new_high_score_path %>
+
 <h1>Listing high_scores</h1>
 
 <div id="scoreboard">
@@ -17,7 +19,7 @@
   <tbody>
     <% @high_scores.each do |high_score| %>
       <tr>
-        <td><%= high_score.first %></td>
+        <td style="font-size:20pt;"><%= high_score.first %></td>
         <td><%= high_score.last %></td>
         <td><%= high_score.email %></td>
         <td><%= high_score.score %></td>
@@ -32,4 +34,3 @@
 
 <br>
 
-<%= link_to 'New High score', new_high_score_path %>
