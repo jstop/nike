@@ -55,7 +55,7 @@ em {font-style:italic;}
 
 .wrap {width:90%; max-width:1200px; margin:0 auto;}
 
-#wrapper {padding:0; margin:0 auto; width:99%; }
+#wrapper {padding:30px; margin:0 auto; width:99%; }
 
 #header { height:270px; line-height:240px}
 #logo {float:left; width:30%;}
