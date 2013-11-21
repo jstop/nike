@@ -9,7 +9,7 @@
       <th>First</th>
       <th>Last</th>
       <th>Email</th>
-      <th>Score</th>
+      <th>Time</th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,7 +22,7 @@
         <td style="font-size:20pt;"><%= high_score.first %></td>
         <td><%= high_score.last %></td>
         <td><%= high_score.email %></td>
-        <td><%= high_score.score %></td>
+        <td><%= "#{high_score.minutes}:#{sprintf '%02d', high_score.seconds}" %></td>
         <td style=font-size:50px;padding:10px;><%= link_to 'Show', high_score %></td>
         <td style=font-size:50px;padding:10px;><%= link_to 'Edit', edit_high_score_path(high_score) %></td>
         <td style=font-size:50px;padding:10px;><%= link_to 'Destroy', high_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>

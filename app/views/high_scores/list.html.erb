@@ -10,7 +10,7 @@
               <th scope="col" align="left" valign="middle" width="1274">
                 <%= "#{high_score.first} #{high_score.last}" %></th>
               <th scope="col" align="center" valign="middle" width="132"> 
-                <%= high_score.score %></th>
+                <%= "#{high_score.minutes}:#{sprintf '%02d', high_score.seconds}" %></th>
             </tr>
     <% end %>
 </tbody>

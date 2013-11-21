@@ -4,7 +4,8 @@ class CreateHighScores < ActiveRecord::Migration
       t.string :first
       t.string :last
       t.string :email
-      t.integer :score
+      t.integer :minutes
+      t.integer :seconds
 
       t.timestamps
     end
