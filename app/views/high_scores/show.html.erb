@@ -17,7 +17,7 @@
 
 <p>
   <strong>Time:</strong>
-  <%= "#{@high_score.minutes}:#{@high_score.seconds}" %>
+  <%= "#{@high_score.minutes}:#{sprintf '%02d', @high_score.seconds}" %>
 </p>
 
 <%= link_to 'Edit', edit_high_score_path(@high_score) %> |
