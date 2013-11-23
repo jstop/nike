@@ -5,6 +5,6 @@ Nike::Application.routes.draw do
   get 'scores' => 'high_scores#scores'
 
   resources :high_scores
-  root 'high_scores#times'
+  root 'high_scores#scores'
 
 end
