@@ -1,5 +1,7 @@
 Nike::Application.routes.draw do
-  get 'times' => 'high_scores#times'
+  resources :best_times
+
+  get 'times' => 'best_times#times'
   get 'scores' => 'high_scores#scores'
 
   resources :high_scores

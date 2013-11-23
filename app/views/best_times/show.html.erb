@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @best_time.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @best_time.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @best_time.email %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @best_time.minutes %>
+</p>
+
+<p>
+  <strong>Seconds:</strong>
+  <%= @best_time.seconds %>
+</p>
+
+<%= link_to 'Edit', edit_best_time_path(@best_time) %> |
+<%= link_to 'Back', best_times_path %>

@@ -4,13 +4,13 @@ class HighScoresController < ApplicationController
   # GET /high_scores/list
   # GET /high_scores.json
   def times
-    @high_scores = HighScore.where.not(seconds: nil).where(minutes: nil).limit(6)
+    @high_scores = HighScore.where.not(seconds: nil).where.not(seconds: 0).where.not(minutes: nil).where.not(minutes: 0).limit(6)
     #@high_scores = HighScore.find(:all, :order => "minutes ASC, seconds DESC", :limit => 6 )
   end
 
   def scores
     #@high_scores = HighScore.find(:all, :order => "score DESC", :limit => 6 )
-    @high_scores = HighScore.where.not(score: nil).limit(6)
+    @high_scores = HighScore.where.not(score: nil).where.not(score: 0).limit(6)
   end
 
   # GET /high_scores

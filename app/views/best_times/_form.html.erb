@@ -1,10 +1,10 @@
-<%= form_for(@high_score) do |f| %>
-  <% if @high_score.errors.any? %>
+<%= form_for(@best_time) do |f| %>
+  <% if @best_time.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@high_score.errors.count, "error") %> prohibited this high_score from being saved:</h2>
+      <h2><%= pluralize(@best_time.errors.count, "error") %> prohibited this best_time from being saved:</h2>
 
       <ul>
-      <% @high_score.errors.full_messages.each do |msg| %>
+      <% @best_time.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -24,8 +24,12 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :score %><br>
-    <%= f.number_field :score %>
+    <%= f.label :minutes %><br>
+    <%= f.number_field :minutes %>
+  </div>
+  <div class="field">
+    <%= f.label :seconds %><br>
+    <%= f.number_field :seconds %>
   </div>
   <div class="actions">
     <%= f.submit %>

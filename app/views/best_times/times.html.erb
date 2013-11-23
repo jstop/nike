@@ -1,5 +1,5 @@
       <div id="header">
-        <div id="logo"><a href="/"><%= image_tag 'c3p-logo.png' %><%#<img src="http://nikefootballsociety.com/scoreboard/wp-content/themes/scoreboard/images/logo.png"  />%></a></div>
+        <div id="logo"><a href="/"><%= image_tag 'c3p-logo.png' %></a></div>
         <div id="title"><h2>LEADERBOARD</h2></div>
       </div>
       <div class="clearboth"></div>
@@ -7,15 +7,15 @@
 <div id="scoreboard">
 <table width="99%" border="0" cellspacing="0" cellpadding="0">
 <tbody>
-    <% @high_scores[0..4].each_with_index do |high_score, index| %>
+    <% @best_times[0..4].each_with_index do |best_time, index| %>
             <tr>
               <th scope="col" align="center" valign="middle" width="144"><%= index+1 %></th>
               <th scope="col" align="center" valign="middle" width="190">
               </th>
               <th scope="col" align="left" valign="middle" width="1274">
-                <%= "#{high_score.first} #{high_score.last}" %></th>
+                <%= "#{best_time.first} #{best_time.last}" %></th>
               <th scope="col" align="center" valign="middle" width="132"> 
-                <%= "#{high_score.minutes}:#{sprintf '%02d', high_score.seconds}" %></th>
+                <%= "#{best_time.minutes}:#{sprintf '%02d', best_time.seconds}" if best_time.seconds %></th>
             </tr>
     <% end %>
 </tbody>

@@ -1,0 +1,36 @@
+<%= link_to 'New Best Time', new_best_time_path %>
+
+<h1>Listing best times</h1>
+
+<div id="scoreboard">
+<table>
+  <thead>
+    <tr>
+      <th style="padding-right:30px;">First</th>
+      <th style="padding-right:30px;">Last</th>
+      <th style="padding-right:30px;">Email</th>
+      <th style="padding-right:30px;">Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @best_times.each do |best_time| %>
+      <tr>
+        <td style="font-size:20pt;"><%= best_time.first %></td>
+        <td style="font-size:20pt;"><%= best_time.last %></td>
+        <td style="font-size:20pt;"><%= best_time.email %></td>
+        <td style="font-size:20pt;"><%= "#{best_time.minutes}:#{sprintf '%02d', best_time.seconds}"if best_time.seconds %></td>
+        <td style=font-size:50px;padding:10px;><%= link_to 'Show', best_time %></td>
+        <td style=font-size:50px;padding:10px;><%= link_to 'Edit', edit_best_time_path(best_time) %></td>
+        <td style=font-size:50px;padding:10px;><%= link_to 'Destroy', best_time, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
