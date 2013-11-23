@@ -1,16 +1,20 @@
 class HighScoresController < ApplicationController
   before_action :set_high_score, only: [:show, :edit, :update, :destroy]
 
+  # GET /high_scores/list
+  # GET /high_scores.json
+  def times
+    @high_scores = HighScore.find(:all, :order => "minutes ASC, seconds DESC", :limit => 6 )
+  end
+
+  def scores
+    @high_scores = HighScore.find(:all, :order => "score DESC", :limit => 6 )
+  end
+
   # GET /high_scores
   # GET /high_scores.json
   def index
     @high_scores = HighScore.all
-  end
-
-  # GET /high_scores/list
-  # GET /high_scores.json
-  def list
-    @high_scores = HighScore.find(:all, :order => "minutes ASC, seconds DESC" )
   end
 
   # GET /high_scores/1
@@ -75,6 +79,6 @@ class HighScoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def high_score_params
-      params.require(:high_score).permit(:first, :last, :email, :minutes, :seconds)
+      params.require(:high_score).permit(:first, :last, :email, :minutes, :seconds, :score)
     end
 end

@@ -1,14 +1,4 @@
 @charset "UTF-8";
-/*
-Theme Name: Scoreboard
-Theme URI: http://www.tavdesign.com/
-Description: Custom theme for Game7
-Author: Tim Schram
-Author URI: http://timschram.com
-Version: 1.0
-
-*/
-
 /* #Reset & Basics
 ================================================== */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -59,16 +49,16 @@ em {font-style:italic;}
 
 #header { height:270px; line-height:240px}
 #logo {float:left; width:30%;}
-#title {float:right; width:65%; text-align:center; color:#F9AA4F;}
+#title {float:right; width:65%; text-align:center; color:rgb(67,32,100);}
 #scoreboard {color:#fff; font-size:100px; font-weight:900; text-transform:uppercase; }
 
-.line {border-bottom:4px dotted #F9AA4F; height:1px;}
+.line {border-bottom:4px dotted #B2FF61; height:1px;}
 
 #content { padding:10px;}
 #footer { padding:10px;}
 
 th {margin:0; padding: 0; padding-top:20px; padding-bottom:10px; }
-tr {border-bottom:4px dotted #F9AA4F;padding-top:10px; }
+tr {border-bottom:4px dotted #B2FF61;padding-top:10px; }
 
 h2.widgettitle {display:none;}
 #points {color:#fff; font-size:100px; font-weight:900; text-transform:uppercase; width:97%; }
@@ -78,18 +68,19 @@ h2.widgettitle {display:none;}
 .one {float:left; width:10%;}
 .two {float:left; width:50%;}
 .three {float:right; width:20%; text-align:right;}
-.space {height:1px;  border-bottom:4px dotted #F9AA4F; padding-bottom:10px; width:100%; float:right;}
-
+.space {height:1px;  border-bottom:4px dotted #B2FF61; padding-bottom:10px; width:100%; float:right;}
 
 
 @media only screen and (min-width: 320px) and (max-width: 760px) {
   
 }
 /*
-input{height:80px; width:700px;}
-input.value {
-      width: 300px;
-      height: 90px;
-      font-size: 80px;
-}
+Theme Name: Scoreboard
+Theme URI: http://www.tavdesign.com/
+Description: Custom theme for Game7
+Author: Tim Schram
+Author URI: http://timschram.com
+Version: 1.0
+
 */
+
