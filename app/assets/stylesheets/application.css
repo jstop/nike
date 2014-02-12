@@ -65,7 +65,7 @@ em {font-style:italic;}
 #footer { padding:10px;}
 
 th {margin:0; padding: 0; padding-top:20px; padding-bottom:10px; }
-tr {border-bottom:4px dotted #B2FF61;padding-top:10px; }
+tr {border-bottom:4px dotted red;padding-top:10px; }
 
 h2.widgettitle {display:none;}
 #points {color:#fff; font-size:100px; font-weight:900; text-transform:uppercase; width:97%; }
@@ -88,6 +88,6 @@ Description: Custom theme for Game7
 Author: Tim Schram
 Author URI: http://timschram.com
 Version: 1.0
-
+Green - #B2FF61
 */
 
