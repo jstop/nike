@@ -56,7 +56,7 @@ em {font-style:italic;}
 
 #header { height:270px; line-height:240px}
 #logo {float:left; width:30%;}
-#title {float:right; width:65%; text-align:center; color:#fff;}
+#title {float:right; width:65%; text-align:center; color:#fff; padding-top:250px;}
 #scoreboard {color:#fff; font-size:100px; font-weight:900; text-transform:uppercase; }
 
 .line {border-bottom:4px dotted #B2FF61; height:1px;}
