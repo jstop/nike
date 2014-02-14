@@ -9,12 +9,13 @@ class BestTimesController < ApplicationController
 
   def times
     @best_times = BestTime.where.not(seconds: nil).where.not(seconds: 0).where.not(minutes: nil).where.not(minutes: 0).limit(6)
-    #@best_times = BestTime.find(:all, :order => "minutes ASC, seconds DESC", :limit => 6 )
+    @best_times = BestTime.find(:all, :order => "minutes ASC, seconds DESC", :limit => 6 )
   end
 
   def both
-    @best_times = BestTime.where.not(seconds: nil).where.not(seconds: 0).where.not(minutes: nil).where.not(minutes: 0).limit(6)
-    @high_scores = HighScore.where.not(score: nil).where.not(score: 0).limit(6)
+    @best_times = BestTime.find(:all, :order => "minutes ASC, seconds ASC", :limit => 6 )
+    #@best_times = BestTime.where.not(seconds: nil).where.not(seconds: 0).where.not(minutes: nil).where.not(minutes: 0).limit(6)
+    @high_scores = HighScore.where.not(score: nil).where.not(score: 0).order('score DESC').limit(6)
   end
 
 
