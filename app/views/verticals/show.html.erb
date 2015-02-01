@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @vertical.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @vertical.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @vertical.email %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @vertical.score %>
+</p>
+
+<%= link_to 'Edit', edit_vertical_path(@vertical) %> |
+<%= link_to 'Back', verticals_path %>

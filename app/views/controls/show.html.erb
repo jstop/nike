@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @control.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @control.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @control.email %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @control.score %>
+</p>
+
+<%= link_to 'Edit', edit_control_path(@control) %> |
+<%= link_to 'Back', controls_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131123055132) do
+ActiveRecord::Schema.define(version: 20150201152202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,24 @@ ActiveRecord::Schema.define(version: 20131123055132) do
     t.datetime "updated_at"
   end
 
+  create_table "controls", force: true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "email"
+    t.integer  "score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "footworks", force: true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "email"
+    t.integer  "score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "high_scores", force: true do |t|
     t.string   "first"
     t.string   "last"
@@ -35,6 +53,15 @@ ActiveRecord::Schema.define(version: 20131123055132) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "score"
+  end
+
+  create_table "verticals", force: true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "email"
+    t.integer  "score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

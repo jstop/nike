@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @footwork.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @footwork.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @footwork.email %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @footwork.score %>
+</p>
+
+<%= link_to 'Edit', edit_footwork_path(@footwork) %> |
+<%= link_to 'Back', footworks_path %>

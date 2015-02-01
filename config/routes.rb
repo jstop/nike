@@ -1,4 +1,10 @@
 Nike::Application.routes.draw do
+  resources :verticals
+
+  resources :controls
+
+  resources :footworks
+
   resources :best_times
 
   get 'times' => 'best_times#times'

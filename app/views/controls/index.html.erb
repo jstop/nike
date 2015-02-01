@@ -1,0 +1,23 @@
+<div id="header">
+  <div id="logo"><a href="/"><img alt="Jumpman" src="/assets/jumpman.png"></a></div>
+  <div id="title"><h2>CP3'S CONTROL</h2></div>
+</div>
+<div class="clearboth"></div>
+
+<div id="scoreboard">
+  <table width="99%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <% @controls[0..4].each_with_index do |high_score, index| %>
+        <tr>
+          <th scope="col" align="center" valign="middle" width="144"><%= index+1 %></th>
+          <th scope="col" align="center" valign="middle" width="190"></th>
+          <th scope="col" align="left" valign="middle" width="1274">
+            <%= "#{high_score.first} #{high_score.last}" %></th>
+          <th scope="col" align="center" valign="middle" width="132"> 
+            <%= high_score.score %></th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div> <!-- End Slider -->
+<br>
