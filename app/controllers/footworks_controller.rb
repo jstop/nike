@@ -5,7 +5,7 @@ class FootworksController < ApplicationController
   # GET /footworks.json
   def index
     #@footworks = Footwork.all
-    @footworks = Footwork.find(:all, :order => "score ASC", :limit => 6 )
+    @footworks = Footwork.find(:all, :order => "score ASC", :limit => 10 )
   end
 
   # GET /footworks/1

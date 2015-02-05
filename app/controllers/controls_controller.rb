@@ -4,7 +4,7 @@ class ControlsController < ApplicationController
   # GET /controls
   # GET /controls.json
   def index
-    @controls= Control.find(:all, :order => "score ASC", :limit => 6 )
+    @controls= Control.find(:all, :order => "score ASC", :limit => 10 )
     #@controls = Control.all
   end
 

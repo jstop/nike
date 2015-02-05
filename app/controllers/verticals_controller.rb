@@ -4,7 +4,7 @@ class VerticalsController < ApplicationController
   # GET /verticals
   # GET /verticals.json
   def index
-    @verticals = Vertical.find(:all, :order => "score DESC", :limit => 6 )
+    @verticals = Vertical.find(:all, :order => "score DESC", :limit => 10 )
     #@verticals = Vertical.all
   end
 
