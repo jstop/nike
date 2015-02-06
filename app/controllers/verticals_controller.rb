@@ -10,7 +10,7 @@ class VerticalsController < ApplicationController
 
   def high_scores
     @high_scores= Vertical.find(:all, :order => "score DESC", :limit => 10 )
-    render partial: 'high_score_table'
+    render partial: 'verticals_high_score_table'
   end
 
   # GET /verticals/1
