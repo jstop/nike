@@ -15,8 +15,10 @@ class ControlsController < ApplicationController
   end
 
   def high_scores
-    @high_scores= Control.find(:all, :order => "score DESC", :limit => 10 )
-    render partial: 'high_score_table'
+
+ do |format|
+      format.json { render json: @controls}
+    end
   end
 
   # GET /controls/1

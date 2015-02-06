@@ -3,21 +3,23 @@
   <div id="title"><h2>BLAKE'S VERTICAL</h2></div>
 </div>
 <div class="clearboth"></div>
-
-<div id="scoreboard">
-  <table width="99%" border="0" cellspacing="0" cellpadding="0">
-    <tbody>
-      <% @verticals[0..9].each_with_index do |high_score, index| %>
-        <tr>
-          <th scope="col" align="center" valign="middle" width="144"><%= index+1 %></th>
-          <th scope="col" align="center" valign="middle" width="190"></th>
-          <th scope="col" align="left" valign="middle" width="1274">
-            <%= "#{high_score.first} #{high_score.last}" %></th>
-          <th scope="col" align="center" valign="middle" width="132"> 
-            <%= high_score.score %>"</th>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div> <!-- End Slider -->
+<div id="high_scores">
+</div>
 <br>
+<script>
+  $(document).ready(function () {
+    // will call refreshPartial every 3 seconds
+    setInterval(refreshPartial, 3000)
+  });
+  // calls action refreshing the partial
+  function refreshPartial() {
+    $.ajax({
+      url: 'verticals_high_scores',
+      success: function(data) {
+        $('div#high_scores').html(data);
+        return false;
+      }
+    });
+  }
+</script>
+

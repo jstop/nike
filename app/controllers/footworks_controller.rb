@@ -8,6 +8,11 @@ class FootworksController < ApplicationController
     @footworks = Footwork.find(:all, :order => "score DESC", :limit => 10 )
   end
 
+  def high_scores
+    @high_scores= Footwork.find(:all, :order => "score DESC", :limit => 10 )
+    render partial: 'high_score_table'
+  end
+
   # GET /footworks/1
   # GET /footworks/1.json
   def show
