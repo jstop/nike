@@ -13,7 +13,7 @@ table {border-collapse: collapse; border-spacing: 0; }
 
 @font-face {
   font-family: "Jordan";
-  src: url(/assets/Jordan\ NHG\ Text-75\ Bold.otf) format("truetype");
+  src: url(/assets/Jordan.otf) format("truetype");
 } 
 
 /* Body
