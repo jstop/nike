@@ -72,7 +72,6 @@ em {font-style:italic;}
 th {margin:0; padding: 0; padding-top:20px; padding-bottom:10px; }
 /*tr {border-bottom:4px dotted black;padding-top:10px; }*/
 tr {border-bottom:4px dotted #47d6c7 ;margin: 20px; padding-top:50px; }
-td { padding-top:50px; }
 
 h2.widgettitle {display:none;}
 #points {color:#fff; font-size:100px; font-weight:900; text-transform:uppercase; width:97%; }
