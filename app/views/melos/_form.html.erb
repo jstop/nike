@@ -1,10 +1,10 @@
-<%= form_for(@control) do |f| %>
-  <% if @control.errors.any? %>
+<%= form_for(@melo) do |f| %>
+  <% if @melo.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@control.errors.count, "error") %> prohibited this control from being saved:</h2>
+      <h2><%= pluralize(@melo.errors.count, "error") %> prohibited this melo from being saved:</h2>
 
       <ul>
-      <% @control.errors.full_messages.each do |msg| %>
+      <% @melo.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

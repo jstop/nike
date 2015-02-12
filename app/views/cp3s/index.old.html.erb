@@ -1,0 +1,33 @@
+<h1>Listing cp3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>Minutes</th>
+      <th>Seconds</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cp3s.each do |cp3| %>
+      <tr>
+        <td><%= cp3.first %></td>
+        <td><%= cp3.last %></td>
+        <td><%= cp3.minutes %></td>
+        <td><%= cp3.seconds %></td>
+        <td><%= link_to 'Show', cp3 %></td>
+        <td><%= link_to 'Edit', edit_cp3_path(cp3) %></td>
+        <td><%= link_to 'Destroy', cp3, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cp3', new_cp3_path %>

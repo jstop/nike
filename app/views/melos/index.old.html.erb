@@ -1,0 +1,33 @@
+<h1>Listing melos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>Minutes</th>
+      <th>Seconds</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @melos.each do |melo| %>
+      <tr>
+        <td><%= melo.first %></td>
+        <td><%= melo.last %></td>
+        <td><%= melo.minutes %></td>
+        <td><%= melo.seconds %></td>
+        <td><%= link_to 'Show', melo %></td>
+        <td><%= link_to 'Edit', edit_melo_path(melo) %></td>
+        <td><%= link_to 'Destroy', melo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Melo', new_melo_path %>

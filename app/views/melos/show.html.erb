@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @melo.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @melo.last %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @melo.minutes %>
+</p>
+
+<p>
+  <strong>Seconds:</strong>
+  <%= @melo.seconds %>
+</p>
+
+<%= link_to 'Edit', edit_melo_path(@melo) %> |
+<%= link_to 'Back', melos_path %>

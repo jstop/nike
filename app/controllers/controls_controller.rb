@@ -15,8 +15,8 @@ class ControlsController < ApplicationController
   end
 
   def high_scores
-    @high_scores= Control.find(:all, :order => "score DESC", :limit => 10 )
-    render partial: 'high_score_table'
+    @high_scores= Control.find(:all, :order => "minutes ASC, seconds ASC", :limit => 10 )
+    render partial: 'best_times_table'
   end
 
   # GET /controls/1
@@ -81,6 +81,6 @@ class ControlsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def control_params
-      params.require(:control).permit(:first, :last, :email, :score)
+      params.require(:control).permit(:first, :last, :email, :score, :minutes, :seconds)
     end
 end

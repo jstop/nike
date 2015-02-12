@@ -1,0 +1,24 @@
+<div id="header">
+  <div id="logo"><a href="/"><%= image_tag 'jumpman_teal.png' %></a></div>
+  <div id="title"><h2>MELO'S FOOTWORK</h2></div>
+</div>
+<div class="clearboth"></div>
+<div id="high_scores">
+</div>
+<br>
+<script>
+  $(document).ready(function () {
+    // will call refreshPartial every 3 seconds
+    setInterval(refreshPartial, 3000)
+  });
+  // calls action refreshing the partial
+  function refreshPartial() {
+    $.ajax({
+      url: 'melo_high_scores',
+      success: function(data) {
+        $('div#high_scores').html(data);
+        return false;
+      }
+    });
+  }
+</script>
