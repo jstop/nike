@@ -1,9 +1,9 @@
-<div id="scoreboard" style="padding-top: 20%">
+<div id="scoreboard" style="padding-top: 3%">
   <table width="99%" border="0" cellspacing="0" cellpadding="0">
     <tbody>
       <% @high_scores[0..9].each_with_index do |high_score, index| %>
         <tr>
-          <th style="padding-bottom:3%;padding-top:3%" scope="col" align="center" valign="middle" width="144"><%= (index+1) %></th>
+          <th style="padding-bottom:1%;padding-top:1%" scope="col" align="center" valign="middle" width="144"><%= (index+1) %></th>
           <th scope="col" align="center" valign="middle" width="190"></th>
           <th scope="col" align="left" valign="middle" width="1274">
             <%= "#{high_score.first} #{high_score.last}" %></th>
