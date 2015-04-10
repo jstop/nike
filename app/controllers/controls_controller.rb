@@ -16,7 +16,7 @@ class ControlsController < ApplicationController
 
   def high_scores
     @high_scores= Control.find(:all, :order => "minutes ASC, seconds ASC", :limit => 10 )
-    render partial: 'best_times_table'
+    render partial: 'controls_high_scores'
   end
 
   # GET /controls/1
