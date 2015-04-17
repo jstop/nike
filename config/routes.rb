@@ -3,21 +3,13 @@ Nike::Application.routes.draw do
 
   resources :cp3s
 
-  resources :verticals, :path => "hotshot" 
+  resources :verticals
 
-  resources :controls, :path => "skills"
+  resources :controls
 
   resources :footworks
 
   resources :best_times
-
-  match 'hotshot', :to => 'verticals#delete_all', :via => :delete
-  match 'skills', :to => 'controls#delete_all', :via => :delete
-  match 'melos', :to => 'melos#delete_all', :via => :delete
-  match 'cp3s', :to => 'cp3s#delete_all', :via => :delete
-  match 'footworks', :to => 'footworks#delete_all', :via => :delete
-  match 'best_times', :to => 'best_times#delete_all', :via => :delete
-
 
   get 'times' => 'best_times#times'
   get 'both' => 'best_times#both'

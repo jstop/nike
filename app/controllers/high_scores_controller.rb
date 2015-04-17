@@ -14,10 +14,6 @@ class HighScoresController < ApplicationController
     @high_scores = HighScore.all
   end
 
-  def delete_all
-    HighScore.delete_all
-  end
-
   # GET /high_scores/1
   # GET /high_scores/1.json
   def show
