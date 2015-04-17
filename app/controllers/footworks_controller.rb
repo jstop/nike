@@ -8,6 +8,10 @@ class FootworksController < ApplicationController
     @footworks = Footwork.find(:all, :order => "score DESC", :limit => 10 )
   end
 
+  def delete_all
+    Footwork.delete_all
+  end
+
   def high_scores
     @high_scores= Footwork.find(:all, :order => "score DESC", :limit => 10 )
     render partial: 'high_score_table'

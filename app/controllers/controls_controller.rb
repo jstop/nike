@@ -14,6 +14,10 @@ class ControlsController < ApplicationController
     end
   end
 
+  def delete_all
+    Control.delete_all
+  end
+
   def high_scores
     @high_scores= Control.find(:all, :order => "minutes ASC, seconds ASC", :limit => 10 )
     render partial: 'controls_high_scores'

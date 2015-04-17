@@ -7,6 +7,10 @@ class Cp3sController < ApplicationController
     @cp3s = Cp3.all
   end
 
+  def delete_all
+    Cp3.delete_all
+  end
+
   def high_scores
     @high_scores= Cp3.find(:all, :order => "minutes ASC, seconds ASC", :limit => 10 )
     render partial: 'best_times_table'

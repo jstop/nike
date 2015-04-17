@@ -25,5 +25,6 @@
   </div>
   <div class="actions">
     <%= f.submit %>
+    <%= button_to "Delete All", {:controller=>"verticals", :action => "delete_all"}, :method=>"delete", :onclick => "return confirm('Are you sure?')" %>
   </div>
 <% end %>

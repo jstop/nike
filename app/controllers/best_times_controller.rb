@@ -18,6 +18,10 @@ class BestTimesController < ApplicationController
     @high_scores = HighScore.where.not(score: nil).where.not(score: 0).order('score DESC').limit(10)
   end
 
+  def delete_all
+    BestTime.delete_all
+  end
+
 
   # GET /best_times/1
   # GET /best_times/1.json

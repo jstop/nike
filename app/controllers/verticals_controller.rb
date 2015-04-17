@@ -8,6 +8,10 @@ class VerticalsController < ApplicationController
     #@verticals = Vertical.all
   end
 
+  def delete_all
+    Vertical.delete_all
+  end
+
   def high_scores
     @high_scores= Vertical.find(:all, :order => "score DESC", :limit => 10 )
     render partial: 'verticals_high_score_table'
@@ -65,6 +69,10 @@ class VerticalsController < ApplicationController
       format.html { redirect_to verticals_url }
       format.json { head :no_content }
     end
+  end
+
+  def delete_all
+    Vertical.delete_all
   end
 
   private
