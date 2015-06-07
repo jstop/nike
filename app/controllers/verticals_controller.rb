@@ -13,6 +13,10 @@ class VerticalsController < ApplicationController
     render partial: 'verticals_high_score_table'
   end
 
+  def delete_all
+    Vertical.destroy_all
+  end
+
   # GET /verticals/1
   # GET /verticals/1.json
   def show

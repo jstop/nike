@@ -19,6 +19,12 @@ Nike::Application.routes.draw do
   get 'melo_high_scores' => 'melos#high_scores'
   get 'footworks_high_scores' => 'footworks#high_scores'
   get 'verticals_high_scores' => 'verticals#high_scores'
+  delete 'delete_all_controls' => 'controls#delete_all'
+  delete 'delete_all_cp3s' => 'cp3s#delete_all'
+  delete 'delete_all_melos' => 'melos#delete_all'
+  delete 'delete_all_footworks' => 'footworks#delete_all'
+  delete 'delete_all_verticals' => 'verticals#delete_all'
+  
 
   resources :high_scores
   root 'high_scores#scores'

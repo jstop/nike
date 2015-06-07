@@ -12,6 +12,10 @@ class Cp3sController < ApplicationController
     render partial: 'best_times_table'
   end
 
+  def delete_all
+    Cp3.destroy_all
+  end
+
   # GET /cp3s/1
   # GET /cp3s/1.json
   def show

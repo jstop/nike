@@ -13,6 +13,10 @@ class FootworksController < ApplicationController
     render partial: 'high_score_table'
   end
 
+  def delete_all
+    Footwork.destroy_all
+  end
+
   # GET /footworks/1
   # GET /footworks/1.json
   def show

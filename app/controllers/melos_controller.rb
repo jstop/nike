@@ -11,6 +11,10 @@ class MelosController < ApplicationController
     @high_scores= Melo.find(:all, :order => "minutes ASC, seconds ASC", :limit => 10 )
     render partial: 'best_times_table'
   end
+
+  def delete_all
+    Melo.destroy_all
+  end
   #
   # GET /melos/1
   # GET /melos/1.json
