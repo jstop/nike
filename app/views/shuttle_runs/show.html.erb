@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @shuttle_run.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @shuttle_run.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @shuttle_run.email %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @shuttle_run.team %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @shuttle_run.minutes %>
+</p>
+
+<p>
+  <strong>Seconds:</strong>
+  <%= @shuttle_run.seconds %>
+</p>
+
+<%= link_to 'Edit', edit_shuttle_run_path(@shuttle_run) %> |
+<%= link_to 'Back', shuttle_runs_path %>

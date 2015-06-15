@@ -1,0 +1,44 @@
+<%= form_for(@vertical_test) do |f| %>
+  <% if @vertical_test.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vertical_test.errors.count, "error") %> prohibited this vertical_test from being saved:</h2>
+
+      <ul>
+      <% @vertical_test.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first %><br>
+    <%= f.text_field :first %>
+  </div>
+  <div class="field">
+    <%= f.label :last %><br>
+    <%= f.text_field :last %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :team %><br>
+    <%= f.text_field :team %>
+  </div>
+  <div class="field">
+    <%= f.label :score %><br>
+    <%= f.number_field :score %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</br>
+</br>
+</br>
+<%= button_to "Delete All Vertical Test Scores", delete_all_vertical_tests_path, :method => :delete, :remote => true, data: { confirm: "Are you sure you want to DELETE ALL Vertical Test Scores?" } %>
+</br>
+</br>
+</br>

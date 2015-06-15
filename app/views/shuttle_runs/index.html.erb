@@ -1,0 +1,18 @@
+<div id="high_scores" style="height: 1500px">
+</div>
+<br>
+<script>
+  $(document).ready(function () {
+    setTimeout(refreshPartial, 125)
+    setInterval(refreshPartial, 3000)
+  });
+  // calls action refreshing the partial
+  function refreshPartial() {
+    $.ajax({
+      url: 'shuttle_runs_high_scores',
+      success: function(data) {
+        $('div#high_scores').html(data);
+      }
+    });
+  }
+</script>

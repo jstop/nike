@@ -1,0 +1,2 @@
+module WingspansHelper
+end

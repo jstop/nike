@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410160339) do
+ActiveRecord::Schema.define(version: 20150615023204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,17 @@ ActiveRecord::Schema.define(version: 20150410160339) do
     t.integer  "score"
   end
 
+  create_table "lane_agilities", force: true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "email"
+    t.string   "team"
+    t.integer  "minutes"
+    t.integer  "seconds"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "melos", force: true do |t|
     t.string   "first"
     t.string   "last"
@@ -77,10 +88,62 @@ ActiveRecord::Schema.define(version: 20150410160339) do
     t.datetime "updated_at"
   end
 
+  create_table "shuttle_runs", force: true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "email"
+    t.string   "team"
+    t.integer  "minutes"
+    t.integer  "seconds"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills_challenges", force: true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "email"
+    t.string   "team"
+    t.integer  "minutes"
+    t.integer  "seconds"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "standing_reaches", force: true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "email"
+    t.string   "team"
+    t.integer  "score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "vertical_tests", force: true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "email"
+    t.string   "team"
+    t.integer  "score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "verticals", force: true do |t|
     t.string   "first"
     t.string   "last"
     t.string   "email"
+    t.integer  "score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "wingspans", force: true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "email"
+    t.string   "team"
     t.integer  "score"
     t.datetime "created_at"
     t.datetime "updated_at"

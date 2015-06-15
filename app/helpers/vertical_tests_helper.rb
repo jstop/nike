@@ -1,0 +1,2 @@
+module VerticalTestsHelper
+end

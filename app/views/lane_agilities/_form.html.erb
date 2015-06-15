@@ -1,0 +1,48 @@
+<%= form_for(@lane_agility) do |f| %>
+  <% if @lane_agility.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lane_agility.errors.count, "error") %> prohibited this lane_agility from being saved:</h2>
+
+      <ul>
+      <% @lane_agility.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first %><br>
+    <%= f.text_field :first %>
+  </div>
+  <div class="field">
+    <%= f.label :last %><br>
+    <%= f.text_field :last %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :team %><br>
+    <%= f.text_field :team %>
+  </div>
+  <div class="field">
+    <%= f.label :minutes %><br>
+    <%= f.number_field :minutes %>
+  </div>
+  <div class="field">
+    <%= f.label :seconds %><br>
+    <%= f.number_field :seconds %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</br>
+</br>
+</br>
+<%= button_to "Delete All Lane Agility Scores", delete_all_lane_agilities_path, :method => :delete, :remote => true, data: { confirm: "Are you sure you want to DELETE ALL Lane Agility Scores?" } %>
+</br>
+</br>
+</br>

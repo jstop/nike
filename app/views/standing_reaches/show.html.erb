@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @standing_reach.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @standing_reach.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @standing_reach.email %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @standing_reach.team %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @standing_reach.score %>
+</p>
+
+<%= link_to 'Edit', edit_standing_reach_path(@standing_reach) %> |
+<%= link_to 'Back', standing_reaches_path %>

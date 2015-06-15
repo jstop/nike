@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @vertical_test.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @vertical_test.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @vertical_test.email %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @vertical_test.team %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @vertical_test.score %>
+</p>
+
+<%= link_to 'Edit', edit_vertical_test_path(@vertical_test) %> |
+<%= link_to 'Back', vertical_tests_path %>

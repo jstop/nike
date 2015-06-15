@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @wingspan.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @wingspan.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @wingspan.email %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @wingspan.team %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @wingspan.score %>
+</p>
+
+<%= link_to 'Edit', edit_wingspan_path(@wingspan) %> |
+<%= link_to 'Back', wingspans_path %>

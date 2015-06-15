@@ -35,9 +35,9 @@
 #Vertical.create({first: 'larry', last: 'david', score: 2})
 #Vertical.create({first: 'david', last: 'stein', score: 28})
 #Vertical.create({first: 'nancy', last: 'stein', score: 7})
-
-Control.delete_all
-Footwork.delete_all
-Cp3.delete_all
-Melo.delete_all
-Vertical.delete_all
+#
+#Control.delete_all
+#Footwork.delete_all
+#Cp3.delete_all
+#Melo.delete_all
+#Vertical.delete_all

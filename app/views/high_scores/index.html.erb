@@ -1,37 +1,22 @@
-<%= link_to 'New High score', new_high_score_path %>
-
-<h1>Listing high_scores</h1>
-
-<div id="scoreboard">
-<table>
-  <thead>
-    <tr>
-      <th style="padding-right:30px;">First</th>
-      <th style="padding-right:30px;">Last</th>
-      <th style="padding-right:30px;">Email</th>
-      <th style="padding-right:30px;">Time</th>
-      <th style="padding-right:30px;">Score</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @high_scores.each do |high_score| %>
-      <tr>
-        <td style="font-size:20pt;"><%= high_score.first %></td>
-        <td style="font-size:20pt;"><%= high_score.last %></td>
-        <td style="font-size:20pt;"><%= high_score.email %></td>
-        <td style="font-size:20pt;"><%= high_score.score %></td>
-        <td style=font-size:50px;padding:10px;><%= link_to 'Show', high_score %></td>
-        <td style=font-size:50px;padding:10px;><%= link_to 'Edit', edit_high_score_path(high_score) %></td>
-        <td style=font-size:50px;padding:10px;><%= link_to 'Destroy', high_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="high_scores" style="height: 1500px">
 </div>
-
 <br>
-
+<script>
+  var count = 0
+  $(document).ready(function () {
+    setTimeout(refreshPartial, 125)
+    // will call refreshPartial every 4 seconds
+    setInterval(refreshPartial, 5000)
+  });
+  // calls action refreshing the partial
+  function refreshPartial() {
+    var urls = [ "wingspans_high_scores", "standing_reaches_high_scores", "vertical_tests_high_scores", "lane_agilities_high_scores", "shuttle_runs_high_scores", "skills_challenges_high_scores"]
+    $.ajax({
+      url: urls[(count%6)],
+      success: function(data) {
+        $('div#high_scores').html(data);
+      }
+    });
+    count++;
+  }
+</script>

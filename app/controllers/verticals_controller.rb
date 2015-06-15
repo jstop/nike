@@ -15,6 +15,7 @@ class VerticalsController < ApplicationController
 
   def delete_all
     Vertical.destroy_all
+    render :nothing => true, :status => 200, :content_type => 'text/html'
   end
 
   # GET /verticals/1

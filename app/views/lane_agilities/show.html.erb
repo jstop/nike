@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @lane_agility.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @lane_agility.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @lane_agility.email %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @lane_agility.team %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @lane_agility.minutes %>
+</p>
+
+<p>
+  <strong>Seconds:</strong>
+  <%= @lane_agility.seconds %>
+</p>
+
+<%= link_to 'Edit', edit_lane_agility_path(@lane_agility) %> |
+<%= link_to 'Back', lane_agilities_path %>

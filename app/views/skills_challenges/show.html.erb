@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @skills_challenge.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @skills_challenge.last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @skills_challenge.email %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @skills_challenge.team %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @skills_challenge.minutes %>
+</p>
+
+<p>
+  <strong>Seconds:</strong>
+  <%= @skills_challenge.seconds %>
+</p>
+
+<%= link_to 'Edit', edit_skills_challenge_path(@skills_challenge) %> |
+<%= link_to 'Back', skills_challenges_path %>
