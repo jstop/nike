@@ -25,10 +25,11 @@ body { background:#FFF; font-family: 'Lato', sans-serif; padding:20px; margin:0}
 
 img,embed,object,video{max-width:100%; height: auto;}
 
+#a {color:#0077c0; text-decoration:none;}
 a {color:black; text-decoration:none;}
 a:hover {text-decoration: underline;}
-p {color:black;font-size:56px;}
-h1 {color:black;font-size:44px;}
+p {color:#47d6c7;font-size:56px;}
+h1 {color:#47d6c7;font-size:44px;}
 h2 {font-family: Jordan; font-size:180px; margin-top:35px;}
 h3 {font-size:18px;}
 
@@ -61,8 +62,8 @@ em {font-style:italic;}
 
 #header { height:270px; line-height:240px}
 #logo {float:left; width:30%;}
-#title {float:right; width:65%; text-align:center; color:black; padding-top:250px;}
-#scoreboard {font-family:Jordan; color:black; font-size:100px; font-weight:900; text-transform:uppercase; }
+#title {float:right; width:65%; text-align:center; color:#47d6c7; padding-top:250px;}
+#scoreboard {font-family:Jordan; color:#48d6c7; font-size:100px; font-weight:900; text-transform:uppercase; }
 
 .line {border-bottom:4px dotted #B2FF61; height:1px;}
 
@@ -71,7 +72,7 @@ em {font-style:italic;}
 
 th {margin:0; padding: 0; padding-top:20px; padding-bottom:10px; }
 /*tr {border-bottom:4px dotted black;padding-top:10px; }*/
-tr {border-bottom:4px dotted black ;margin: 20px; padding-top:50px; }
+tr {border-bottom:4px dotted #47d6c7 ;margin: 20px; padding-top:50px; }
 td { padding-top:50px; }
 
 h2.widgettitle {display:none;}

@@ -1,5 +1,5 @@
 <div id="header">
-  <div id="logo"><a href="/"><%= image_tag 'jumpman_teal.png' %></a></div>
+  <div id="logo"><a href="/"><%= image_tag 'jumpman_black.png' %></a></div>
   <div id="title">
     <h2><%= @title %></h2>
   </div>
@@ -13,8 +13,10 @@
           <tr>
             <th style="padding-bottom:3%;padding-top:3%" scope="col" align="center" valign="middle" width="144"><%= index+1 %></th>
             <th scope="col" align="center" valign="middle" width="190"></th>
-            <th scope="col" align="left" valign="middle" width="1274">
+            <th scope="col" align="left" valign="middle" width="637">
               <%= "#{high_score.first} #{high_score.last}" %></th>
+            <th scope="col" align="left" valign="middle" width="637">
+              <%= "#{high_score.team}" %></th>
             <th scope="col" align="center" valign="middle" width="132"> 
               <%= high_score.score %>"</th>
           </tr>

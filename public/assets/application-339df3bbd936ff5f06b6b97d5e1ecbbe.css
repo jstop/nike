@@ -62,7 +62,7 @@ em {font-style:italic;}
 #header { height:270px; line-height:240px}
 #logo {float:left; width:30%;}
 #title {float:right; width:65%; text-align:center; color:black; padding-top:250px;}
-#scoreboard {font-family:Jordan; color:black; font-size:100px; font-weight:900; text-transform:uppercase; }
+#scoreboard {font-family:Jordan; color:#48d6c7; font-size:100px; font-weight:900; text-transform:uppercase; }
 
 .line {border-bottom:4px dotted #B2FF61; height:1px;}
 
